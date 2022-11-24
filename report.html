@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>杭州市文旅投诉页面</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    function check() {
+        var username = document.getElementById("username").value;
+        var browser = document.getElementById("_jingqu").value;
+        var tel = document.getElementById("tel").value;
+        if (username === "" || browser === "" || tel === "") {
+            alert("填写有误");
+        }
+    }
+</script>
+<style>
+    .fakeimg {
+        height: 200px;
+        background: #425066;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+<!--头-->
+<div class="p-4 text-white text-center"
+     style="background-color: #177cb0;background-image: url(img/bg1.jpg);background-position: center;background-position-y:30%;background-repeat: no-repeat;background-size: 120%;">
+    <div class="row">
+        <div class="col-sm-6" style="text-align: left;padding-left: 60px"><img src="logo.png" style="width: 350px;">
+        </div>
+        <div class="col-sm-8"><h1></h1></div>
+    </div>
+    <!--    <span><p style="color: #1c5bb8;font-weight: bolder;font-size: 60px;">杭州市文旅咨询网</p></span>-->
+</div>
+<!--头-->
+<nav class="navbar navbar-expand-sm navbar-dark"
+     style="background-color: #425066;padding-right: 40px;padding-left: 40px">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">首页</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="list.html">时政要闻</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="booking.html">景点预约</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="report.html">旅游投诉</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <!--面包屑预留位-->
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="container mt-5"><a class="fakeimg">广告预留</a></div>
+        </div>
+        <div class="col-sm-8">
+            <div class="container mt-3">
+                <form method="post" class="was-validated" onsubmit="check()">
+                    <h3>杭州旅游投诉页</h3><br>
+                    <label for="_jingqu" class="form-label">景区名:</label>
+                    <input class="form-control" list="browsers" name="jingqu" id="_jingqu"
+                           placeholder="请输入或选择景区" required>
+                    <datalist id="browsers">
+                        <option value="三潭印月"></option>
+                        <option value="双峰插云"></option>
+                        <option value="拱宸桥"></option>
+                        <option value="半山国家森林公园"></option>
+                        <option value="西溪湿地国家湿地公园"></option>
+                        <option value="不知道"></option>
+                    </datalist>
+                    <br>
+                    <label for="username" class="form-label">姓名：</label>
+                    <input type="text" class="form-control" placeholder="输入联系人姓名" id="username" required
+                           name="username"><br>
+                    <label for="username" class="form-label">联系方式：</label>
+                    <input type="text" class="form-control" placeholder="输入您的电话号" id="tel" name="tel"
+                           required><br>
+                    <label for="comment" class="form-label">留言：</label>
+                    <textarea class="form-control" rows="4" id="comment" name="text" required
+                              placeholder="你可以留言，但我不提倡言论自由"></textarea><br>
+                    <button type="submit" class="btn btn-primary">提交</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="container mt-5"><a href="https://liuyan.www.gov.cn/2020wxzlsjh/bmdf.html?q=zj"
+                                           target="_blank"><img style="width:215px;" alt="留言" border="0"
+                                                                src="http://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3390/site/picture/0/2102251634034279931.jpg"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-5 p-2 text-white text-center" style="background-color: #177cb0">
+    <p>© XueMian168.Com</p>
+    <p>浙ICP备0000000000号</p>
+</div>
+</body>
+</html>
+
