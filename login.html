@@ -4,8 +4,8 @@
     <title>超级管理员登录页面</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="./conf/bootstrap.min.css" rel="stylesheet">
+    <script src="./conf/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <!--title-->
@@ -16,16 +16,26 @@
     </div>
     <!--    <span><p style="color: #1c5bb8;font-weight: bolder;font-size: 60px;">杭州市文旅咨询网</p></span>-->
 </div>
-
+<script type="text/javascript">
+    function login() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username === "admin" && password === "123"){
+            window.open("./admin/index.html")
+        }else {
+            alert("登陆失败");
+        }
+    }
+</script>
 <nav class="navbar navbar-expand-sm navbar-dark"
      style="background-color: #425066;padding-right: 40px;padding-left: 40px">
     <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="index.html">首页</a>
+                <a class="nav-link" href="index.html">首页</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="list.html">时政要闻</a>
+                <a class="nav-link" href="list.html">时政要闻</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="booking.html">景点预约</a>
@@ -42,17 +52,17 @@
         <div class="container mt-3">
             <p style="padding: 30px"></p>
             <h3>管理员登录</h3>
-            <form action="" class="was-validated" method="post">
+            <form class="was-validated" method="post" onsubmit="login()">
                 <div class="mb-3 mt-3">
-                    <label for="uname" class="form-label">用户名:</label>
-                    <input type="text" class="form-control" id="uname" placeholder="请输入用户名" name="uname"
+                    <label for="username" class="form-label">用户名:</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入用户名" name="username"
                            required>
                     <div class="valid-feedback">有效</div>
                     <div class="invalid-feedback">请输入用户名！</div>
                 </div>
                 <div class="mb-3">
-                    <label for="pwd" class="form-label">密码:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="请输入密码" name="pswd"
+                    <label for="password" class="form-label">密码:</label>
+                    <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password"
                            required>
                     <div class="valid-feedback">有效</div>
                     <div class="invalid-feedback">请输入密码！</div>
